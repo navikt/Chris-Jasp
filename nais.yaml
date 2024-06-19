@@ -1,7 +1,7 @@
 apiVersion: nais.io/v1alpha1
 kind: Application
 metadata:
-  name: <YOUR_TEAM_NAME> # ENDRE DETTE! Dette vil være navnet på applikasjonen din
+  name: chris-jasp # ENDRE DETTE! Dette vil være navnet på applikasjonen din
   namespace: leesah-quiz
   labels:
     team: leesah-quiz
@@ -13,5 +13,5 @@ spec:
   kafka:
     pool: nav-dev
   env:
-    - name: QUIZ_TOPIC
+  - name: QUIZ_TOPIC
       value: leesah-quiz.leesah-rapid-v2
