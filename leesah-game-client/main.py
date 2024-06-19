@@ -39,7 +39,7 @@ class MyParticipant(quiz_rapid.QuizParticipant):
     
     def handle_NAV(self, question: quiz_rapid.Question):
 
-        if question.question == "På hvilken nettside finner man informasjon om rekruttering til NAV IT?"
+        if question.question == "På hvilken nettside finner man informasjon om rekruttering til NAV IT?":
             self.publish_answer(
                     question_id=question.messageId, category=question.category, answer="https://www.detsombetyrnoe.no/"
                 )
