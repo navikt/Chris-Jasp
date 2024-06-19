@@ -13,5 +13,5 @@ spec:
   kafka:
     pool: nav-dev
   env:
-  - name: QUIZ_TOPIC
+    - name: QUIZ_TOPIC
       value: leesah-quiz.leesah-rapid-v2
