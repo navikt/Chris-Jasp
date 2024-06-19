@@ -35,7 +35,6 @@ class MyParticipant(quiz_rapid.QuizParticipant):
             
         
 
-
     def main():
         rapid = quiz_rapid.QuizRapid(
         team_name=TEAM_NAME,
