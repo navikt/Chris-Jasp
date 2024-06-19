@@ -50,7 +50,7 @@ class Nav(quiz_rapid.QuizParticipant):
     def handle_nav_question(self, question: quiz_rapid.Question):
         # Add code here to solve the first question! Hint: Check Readme 😎
         self.publish_answer(
-                question_id=question.messageId, category=question.category, answer="https://www.nav.no/arbeid"
+                question_id=question.messageId, category=question.category, answer="https://www.detsombetyrnoe.no"
             )
     
             
