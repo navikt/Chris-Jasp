@@ -29,11 +29,15 @@ class MyParticipant(quiz_rapid.QuizParticipant):
 
     def handle_register_team(self, question: quiz_rapid.Question):
         # Add code here to solve the first question! Hint: Check Readme 😎
+        self.publish_answer(
+                question_id=question.messageId, category=question.category, answer=HEX_CODE
+            )
+            
         
 
 
-def main():
-    rapid = quiz_rapid.QuizRapid(
+    def main():
+        rapid = quiz_rapid.QuizRapid(
         team_name=TEAM_NAME,
         topic=os.getenv("QUIZ_TOPIC"),
         bootstrap_servers=os.getenv("KAFKA_BROKERS"),
@@ -43,4 +47,4 @@ def main():
         short_log_line=False,  # Logg bare en forkortet versjon av meldingene
         log_ignore_list=[],  # Liste med spørsmålskategorier loggingen skal ignorere
     )
-    return MyParticipant(), rapid
+        return MyParticipant(), rapid
