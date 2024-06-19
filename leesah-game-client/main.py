@@ -8,9 +8,9 @@ from client_lib import quiz_rapid
 
 # Config #
 # 1. Set `TEAM_NAME` to your preferred team name
-TEAM_NAME = "CHANGE ME"
+TEAM_NAME = "Chris-Jasp"
 # 2. Set `HEX_CODE` to your preferred team color
-HEX_CODE = "CHANGE ME"
+HEX_CODE = "#FFFF00"
 # ###### #
 
 
