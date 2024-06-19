@@ -32,6 +32,27 @@ class MyParticipant(quiz_rapid.QuizParticipant):
         self.publish_answer(
                 question_id=question.messageId, category=question.category, answer=HEX_CODE
             )
+        
+class Nav(quiz_rapid.QuizParticipant):
+    def __init__(selv):
+        super().__init__(TEAM_NAME)
+
+    def handle_question(self, question: quiz_rapid.Question):
+        if question.category == "NAV":
+            self.handle_register_team(question)
+
+
+    def handle_assessment(self, assessment: quiz_rapid.Assessment):
+        pass
+
+    # ---------------------------------------------------------------------------- Question handlers
+
+    def handle_nav_question(self, question: quiz_rapid.Question):
+        # Add code here to solve the first question! Hint: Check Readme 😎
+        self.publish_answer(
+                question_id=question.messageId, category=question.category, answer="https://www.nav.no/arbeid"
+            )
+    
             
         
 
