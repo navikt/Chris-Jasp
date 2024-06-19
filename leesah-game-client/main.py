@@ -8,7 +8,7 @@ from client_lib import quiz_rapid
 
 # Config #
 # 1. Set `TEAM_NAME` to your preferred team name
-TEAM_NAME = "Chris-Jasp"
+TEAM_NAME = "sist_men_ikke_minst"
 # 2. Set `HEX_CODE` to your preferred team color
 HEX_CODE = "#FFFF00"
 # ###### #
@@ -35,15 +35,15 @@ class MyParticipant(quiz_rapid.QuizParticipant):
             
         
 
-    def main():
-        rapid = quiz_rapid.QuizRapid(
-        team_name=TEAM_NAME,
-        topic=os.getenv("QUIZ_TOPIC"),
-        bootstrap_servers=os.getenv("KAFKA_BROKERS"),
-        auto_commit=False,  # Bare skru på denne om du vet hva du driver med :)
-        log_questions=True,  # Logg spørsmålene appen mottar
-        log_answers=True,  # Logg svarene appen sender
-        short_log_line=False,  # Logg bare en forkortet versjon av meldingene
-        log_ignore_list=[],  # Liste med spørsmålskategorier loggingen skal ignorere
-    )
-        return MyParticipant(), rapid
+def main():
+    rapid = quiz_rapid.QuizRapid(
+    team_name=TEAM_NAME,
+    topic=os.getenv("QUIZ_TOPIC"),
+    bootstrap_servers=os.getenv("KAFKA_BROKERS"),
+    auto_commit=False,  # Bare skru på denne om du vet hva du driver med :)
+    log_questions=True,  # Logg spørsmålene appen mottar
+    log_answers=True,  # Logg svarene appen sender
+    short_log_line=False,  # Logg bare en forkortet versjon av meldingene
+    log_ignore_list=[],  # Liste med spørsmålskategorier loggingen skal ignorere
+)
+    return MyParticipant(), rapid
