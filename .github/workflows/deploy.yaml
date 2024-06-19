@@ -1,4 +1,3 @@
-# FYLL UT DENNE MED EKSEMPLET I DOCS'A
 on: [push]
 
 jobs:
